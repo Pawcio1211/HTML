@@ -1,0 +1,85 @@
+body {
+    display: flex;
+    text-align: center;
+    align-items: center;
+}
+
+.pion {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    text-align: center;
+    align-items: center;
+
+    border: solid blue 5px;
+}
+
+
+.text {
+    border: 5px red solid;
+    border-radius: 5px;
+    font-size: 50px;
+    flex: 1;
+}
+
+.kontent {
+    flex: 5;
+    display: flex;
+    align-items: center;
+    text-align: center;
+}
+
+input[type="file"] {
+    width: 300px;
+    background-color: greenyellow;
+    font-size: 20px;
+    color: white;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    letter-spacing: 2px;
+    outline: none;
+    border: 5px solid red;
+
+}
+
+.interfejs {
+    display: flex;
+    border: green 5px solid;
+    text-align: center;
+    align-items: center;
+    height: 100%;
+}
+
+.srodek {
+    display: flex;
+    height: 400px;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    border: 5px solid yellowgreen;
+    flex: 1;
+}
+
+.srodek img {
+    margin: 25px 0px 5px 0px;
+    height: 250px;
+    width: 250px;
+}
+
+.ładne {
+    display: flex;
+    flex: 3;
+    border: 5px goldenrod solid;
+}
+
+.ładne img {
+
+    text-align: center;
+    align-items: center;
+    height: 400px;
+    width: 100%;
+    border: 5px solid red;
+}

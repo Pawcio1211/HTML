@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+
+	<meta charset="utf-8">
+	<title>Katalog samochodowy</title>
+	<meta name="description" content="Stwórz wymarzony model swojego samochodu!">
+	<meta name="keywords" content="samochód, katalog, salon, nowe auto">
+	<meta name="author" content="Jan Nowak">
+
+	<meta http-equiv="X-Ua-Compatible" content="IE=edge">
+
+	<link rel="stylesheet" href="main.css">
+
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700&amp;subset=latin-ext" rel="stylesheet">
+
+	<!--[if lt IE 9]>
+	<script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
+	<![endif]-->
+
+</head>
+
+<body>
+
+	<header>
+
+		<h1>Wybierz konfigurację samochodu</h1>
+
+	</header>
+
+	<main>
+
+		<article>
+
+			<form action="order.php" method="post" enctype="multipart/form-data">
+				<div class="row">
+					<fieldset>
+
+						<legend> Rodzaj nadwozia </legend>
+
+						<div>
+							<label><input type="radio" value="1" name="nadwozie" checked> Hatchback </label>
+						</div>
+
+						<div>
+							<label><input type="radio" value="2" name="nadwozie"> Kabriolet </label>
+						</div>
+
+						<div>
+							<label><input type="radio" value="3" name="nadwozie"> Kombi </label>
+						</div>
+
+					</fieldset>
+				</div>
+				<div class="row">
+					<label for="silnik">Rodzaj silnika</label>
+					<select name="" id="silnik">
+						<option value="w">Wysokoprężny</option>
+						<option value="b" selected>Benzynowy</option>
+						<option value="e">Elektryczny</option>
+						<option value="h">Hybrydowy</option>
+					</select>
+				</div>
+
+				<div class="row">
+					<fieldset>
+						<legend>Wyposarzenie samochodu</legend>
+
+						<div class="col">
+							<div><label><input type="checkbox" name="wyp[]" value="1" checked
+										disabled>Klimatyzacja</label></div>
+							<div><label><input type="checkbox" name="wyp[]" value="2" checked disabled>System: ESP i
+									ABS</label></div>
+							<div><label><input type="checkbox" name="wyp[]" value="3">Tempomat</label></div>
+							<div><label><input type="checkbox" name="wyp[]" value="4">Tapicarka skurzana</label></div>
+						</div>
+
+						<div class="col">
+							<div><label><input type="checkbox" name="wyp[]" value="5">tylny spojler dachowy</label>
+							</div>
+							<div><label><input type="checkbox" name="wyp[]" value="6">reflektory przeciwmgielne</label>
+							</div>
+							<div><label><input type="checkbox" name="wyp[]" value="7"> przeciwmgielne tylne
+									szyby</label>
+							</div>
+							<div><label><input type="checkbox" name="wyp[]" value="8">czujniki parkowania</label></div>
+						</div>
+
+						<div class="col">
+							<div><label><input type="checkbox" name="wyp[]" value="9">podgrzewane fotele</label></div>
+							<div><label><input type="checkbox" name="wyp[]" value="10">składane lusterka</label></div>
+							<div><label><input type="checkbox" name="wyp[]" value="11">światła led do jazdy
+									dziennej</label></div>
+						</div>
+					</fieldset>
+				</div>
+
+
+				<div class="row">
+
+					<label for="choinka">Zapach choinki</label>
+
+					<div style="margin-top: 10px;">
+						<select name="choinka[]" id="choinka" multiple size="4">
+							<option value="k">kokosowa</option>
+							<option value="c" selected>cytrynoway</option>
+							<option value="t">truskawowa</option>
+							<option value="b">brzoskwiniowa</option>
+						</select>
+					</div>
+				</div>
+
+				<div class="row">
+					<label>Imie: <input type="text" name="imie" placeholder="Prezentacja plcacholder"></label>
+					<label>Haslo: <input type="password" name="haslo"></label>
+					<label>Szukaj: <input type="search" name="fraza"></label>
+				</div>
+
+				<div class="row">
+					<label>Ile kluczyków <input type="number" placeholder="tylko liczba" name="kluczyk"
+							step="1"></label>
+				</div>
+
+				<div class="row">
+					<label>Adres email: <input type="email" placeholder="Email" name="adres" required></label>
+					<label>Numer telefonu: <input type="tel" placeholder="tel" name="telefon" required></label>
+				</div>
+				<div class="row">
+					<label>Data: <input type="date" name="dzien" min="2019-03-01" max="2019-03-31"></label>
+					<label>Preferowany czas dostawy: <input type="time" name="czas" step="1" value="18:00"
+							readonly></label>
+				</div>
+
+				<div class="row">
+					<div><label for="Komentarz"> Uwagi do zamówienia</label></div>
+					<textarea name="Komentarz" id="Komentarz" cols="100" rows="10" maxlength="10"
+						minlength="2"></textarea>
+				</div>
+
+				<div class="row">
+					<label>Prześlij zdjęcie poprzedniego samochodu <input type="file" name="obraz"
+							accept="image/x-png,image/gif,image/png" multiple></label>
+				</div>
+
+				<div class="row">
+					<label>Wybierz kolor:<input type="color" name="color" value="#ff0000"></label>
+				</div>
+
+				<div class="row">
+					<label>Pokaz progres <label><progress max="100" value="75"></progress></label></label>
+				</div>
+
+				<div class="row">
+					<label> Stopień zatankowania samochodu </label><meter min="0" max="100" title="procent" value="75"
+						low="30" high="70" optimum="75"></meter>
+				</div>
+
+
+				<div class="row">
+					<label>Twoja strona internetowa <input type="url" required></label>
+				</div>
+
+				<input type="hidden" name="token" value="ug3f5gjh">
+				<div class="row">
+
+					<input type="submit" value="Zamawiam">
+					<input type="reset" value="Zresetuj">
+					<!--
+						<input type="button" value="Zamawiam2">
+						<button>Zamawiam3</button>
+						<button type="button">Zamawiam4</button>
+					-->
+				</div>
+
+
+			</form>
+
+		</article>
+
+	</main>
+
+</body>
+
+</html>
